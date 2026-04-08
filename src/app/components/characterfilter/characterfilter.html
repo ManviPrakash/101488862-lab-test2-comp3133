@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill" style="width: 300px; margin-bottom: 20px;">
+    <mat-label>Filter by House</mat-label>
+    <mat-select [formControl]="houseControl" (selectionChange)="onHouseChange()">
+      <mat-option value="All">All Characters</mat-option>
+      <mat-option value="Gryffindor">Gryffindor</mat-option>
+      <mat-option value="Slytherin">Slytherin</mat-option>
+      <mat-option value="Hufflepuff">Hufflepuff</mat-option>
+      <mat-option value="Ravenclaw">Ravenclaw</mat-option>
+      <mat-option value="None">No House</mat-option>
+    </mat-select>
+  </mat-form-field>

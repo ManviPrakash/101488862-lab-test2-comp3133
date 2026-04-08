@@ -1,0 +1,44 @@
+@if (character()) {
+  <div style="display: flex; justify-content: center;">
+    <mat-card style="width: 100%; max-width: 800px; padding: 50px; border-radius: 20px !important; background-color: #231d1b !important;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="color: #f4f1ea; font-size: 36px; font-weight: 800; margin: 0;">{{ character()?.name }}</h1>
+      </div>
+      
+      <div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+        @if (character()?.image) {
+          <div style="flex: 1; min-width: 250px;">
+            <img [src]="character()?.image" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); object-fit: cover;">
+          </div>
+        }
+
+        <div style="flex: 1.5; min-width: 300px; color: #d6cfcd; font-size: 16px; line-height: 1.8;">
+          @switch(character()?.house) {
+            @case ('Gryffindor') { <p><strong>House:</strong><span style="color: #ff4733; font-weight: 700;">Gryffindor</span></p> }
+            @case ('Slytherin') { <p><strong>House:</strong><span style="color: #2ee670; font-weight: 700;">Slytherin</span></p> }
+            @case ('Hufflepuff') { <p><strong>House:</strong><span style="color: #ffd659; font-weight: 700;">Hufflepuff</span></p> }
+            @case ('Ravenclaw') { <p><strong>House:</strong><span style="color: #4da6ff; font-weight: 700;">Ravenclaw</span></p> }
+            @default { <p><strong>House:</strong> <span style="color: #888; font-weight: 700;">Unknown/None</span></p> }
+          }
+          
+          <p><strong>Wizard:</strong> {{ character()?.wizard ? 'Yes' : 'No' }}</p>
+          <p><strong>Species:</strong> {{ character()?.species || 'Unknown' }}</p>
+          <p><strong>Ancestry:</strong> {{ character()?.ancestry || 'Unknown' }}</p>
+          <p><strong>Actor:</strong> {{ character()?.actor || 'Unknown' }}</p>
+
+          <p><strong>Wand Wood:</strong> {{ character()?.wand?.wood || 'Unknown' }}</p>
+          <p><strong>Wand Core:</strong> {{ character()?.wand?.core || 'Unknown' }}</p>
+          <p><strong>Wand Length:</strong> {{ character()?.wand?.length || 'Unknown' }}</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 50px; text-align: center;">
+        <button mat-raised-button style="background-color: #c99a2e !important; color: #161211 !important;" routerLink="/">⬅ Back to Roster</button>
+      </div>
+    </mat-card>
+  </div>
+} @else {
+  <div style="text-align: center; padding: 50px;">
+    <h2 style="color: #f4f1ea; font-weight: 700;">Loading wizarding records...</h2>
+  </div>
+}

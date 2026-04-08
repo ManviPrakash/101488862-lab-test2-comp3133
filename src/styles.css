@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #161211 !important; 
+  color: #f4f1ea;
+}
+
+.mat-mdc-card {
+  background-color: #231d1b !important; /* Dark grey-brown card */
+  border-radius: 20px !important; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.mat-mdc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(201, 154, 46, 0.2) !important; /* Gold glow on hover */
+  border-color: rgba(201, 154, 46, 0.3) !important;
+}
+
+.premium-image {
+  height: 420px !important; 
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center 10% !important; 
+  margin: 0 !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Premium Pill-Shaped Buttons */
+.mat-mdc-raised-button,
+.mat-mdc-button {
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  padding: 0 32px !important;
+  line-height: 44px !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(135deg, #7c2626 0%, #4a1515 100%) !important; /* Rich red gradient */
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(124, 38, 38, 0.4) !important;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  background: linear-gradient(135deg, #962f2f 0%, #5a1f1e 100%) !important;
+}
+
+/* Fix Dark Mode Dropdown Filter */
+.mat-mdc-form-field-flex {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px 12px 0 0 !important;
+  border-bottom: 2px solid #c99a2e !important;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
+.mat-mdc-select-value-text, .mat-mdc-floating-label, .mat-mdc-select-arrow {
+  color: #f4f1ea !important;
+}
+
+/* Dynamic House Badges */
+.house-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.badge-gryffindor { background-color: rgba(156, 18, 3, 0.15); color: #ff4733; border: 1px solid rgba(156, 18, 3, 0.5); }
+.badge-slytherin { background-color: rgba(3, 92, 36, 0.15); color: #2ee670; border: 1px solid rgba(3, 92, 36, 0.5); }
+.badge-hufflepuff { background-color: rgba(201, 154, 46, 0.15); color: #ffd659; border: 1px solid rgba(201, 154, 46, 0.5); }
+.badge-ravenclaw { background-color: rgba(8, 59, 110, 0.15); color: #4da6ff; border: 1px solid rgba(8, 59, 110, 0.5); }
+.badge-none { background-color: rgba(255, 255, 255, 0.05); color: #888; border: 1px solid rgba(255, 255, 255, 0.1); }

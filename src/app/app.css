@@ -1,0 +1,5 @@
+a[routerLink="/"]:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+  }
